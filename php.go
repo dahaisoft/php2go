@@ -1441,25 +1441,25 @@ func Fgetcsv(handle *os.File, length int, delimiter rune) ([][]string, error) {
 
 // disk_free_space()
 // Only supports Unix/Linux operating systems
-func DiskFreeSpace(directory string) (uint64, error) {
-	fs := syscall.Statfs_t{}
-	err := syscall.Statfs(directory, &fs)
-	if err != nil {
-		return 0, err
-	}
-	return fs.Bfree * uint64(fs.Bsize), nil
-}
+//func DiskFreeSpace(directory string) (uint64, error) {
+//	fs := syscall.Statfs_t{}
+//	err := syscall.Statfs(directory, &fs)
+//	if err != nil {
+//		return 0, err
+//	}
+//	return fs.Bfree * uint64(fs.Bsize), nil
+//}
 
 // disk_total_space()
 // Only supports Unix/Linux operating systems
-func DiskTotalSpace(directory string) (uint64, error) {
-	fs := syscall.Statfs_t{}
-	err := syscall.Statfs(directory, &fs)
-	if err != nil {
-		return 0, err
-	}
-	return fs.Blocks * uint64(fs.Bsize), nil
-}
+//func DiskTotalSpace(directory string) (uint64, error) {
+//	fs := syscall.Statfs_t{}
+//	err := syscall.Statfs(directory, &fs)
+//	if err != nil {
+//		return 0, err
+//	}
+//	return fs.Blocks * uint64(fs.Bsize), nil
+//}
 
 // glob()
 func Glob(pattern string) ([]string, error) {
@@ -1467,9 +1467,9 @@ func Glob(pattern string) ([]string, error) {
 }
 
 // umask()
-func Umask(mask int) int {
-	return syscall.Umask(mask)
-}
+//func Umask(mask int) int {
+//	return syscall.Umask(mask)
+//}
 
 //////////// Variable handling Functions ////////////
 
