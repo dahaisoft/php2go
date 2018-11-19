@@ -1111,6 +1111,7 @@ func Rand(min, max int) int {
 	// r := rand.New(rand.NewSource(time.Now().UnixNano()))
 	// n := r.Intn(math.MaxInt32)
 	// return n/((math.MaxInt32+1)/(max-min+1)) + min
+	return 0
 }
 
 // round()
