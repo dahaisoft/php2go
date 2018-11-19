@@ -1105,12 +1105,12 @@ func Abs(number float64) float64 {
 
 // rand()
 func Rand(min, max int) int {
-	if min > max {
-		panic("min: min cannot be greater than max")
-	}
-	r := rand.New(rand.NewSource(time.Now().UnixNano()))
-	n := r.Intn(math.MaxInt32)
-	return n/((math.MaxInt32+1)/(max-min+1)) + min
+	// if min > max {
+	// 	panic("min: min cannot be greater than max")
+	// }
+	// r := rand.New(rand.NewSource(time.Now().UnixNano()))
+	// n := r.Intn(math.MaxInt32)
+	// return n/((math.MaxInt32+1)/(max-min+1)) + min
 }
 
 // round()
